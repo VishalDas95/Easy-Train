@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cancellation</title>
+	<style>
+		body{
+			font-family: Helvetica;
+			background-color: white;
+			background: url('trainbg.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.r{
+			border-radius:10px;
+		}
+		.p{
+			background-color:orange;
+			border-radius:10px;
+			width:50%;
+		}
+		#t{}
+	</style>
+	<script>
+		function g(){
+			document.getElementById("m").style.background="green";
+		}
+		function y(){
+			document.getElementById("m").style.background="yellow";
+		}
+		function g1(){
+			document.getElementById("n1").style.background="green";
+		}
+		function y1(){
+			document.getElementById("n1").style.background="yellow";
+		}
+		function check(){
+			var z=document.getElementById("n").value;
+			if(z=="1234abc"){
+					var c=confirm("Are you sure?you want to cancel the the tickets.");
+				if(c==true){
+					alert("Cancellation tickets is sucessful.Your money comes back to your respective wallet within 24 hours. ");
+					alert("Redirecting to Menu page......");
+					window.location.href="index.html";
+				}
+				else{
+					alert("Redirecting to Menu page......");
+					window.location.href="index.html";
+				}
+			}else{
+				alert("Invalid ticket Number!");
+				window.location.href="cancellation.html";
+			}
+		}
+	</script>
+</head>
+<body background="Images/6_small.jpg">
+	<div>
+		<pre>
+			<br><br><br><br>
+		</pre>
+	</div>
+	<center>
+		<div class="p">
+			<form get="method">
+				<table>
+					<tr>
+						<td>
+							<pre>
+							<br><br><br><br>
+							</pre>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:30px;">Ticket Number:<input type="text" placeholder="Ticket Number" id="n" class="r" style="font-size:30px" required></td>
+					</tr>
+					<tr>
+						<td>
+							<pre>
+							<br><br><br><br></pre>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="button" style="font-size:30px; border-radius:20px;background-color:yellow;" value="Cancel the ticket" onmouseover="g()" onmouseout="y()" id="m" onclick="check()">
+							<input type="button" style="font-size:30px; border-radius:20px;background-color:yellow;" value="Back" onmouseover="g1()" onmouseout="y1()" id="n1" onclick='window.location.href="index.html"'>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</center>
+</body>
+</html>

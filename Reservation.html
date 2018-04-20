@@ -1,0 +1,266 @@
+<html>
+<head>
+	<title>Reservation</title>
+	<style>
+		body{
+			font-family: Helvetica;
+			background-color: white;
+			background: url('trainbg.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.d{
+		width:90%;
+		}
+		.d1{
+		background-color:white;
+		opacity:0.5;
+		width:100%;
+		border-radius:50px;
+		}
+		.d2{
+		float:left;
+		width:40%;
+		border-radius:20px;
+		background-color:yellow;
+		}
+		.d3{
+		float:right;
+		width:40%;
+		border-radius:20px;
+		background-color:yellow;
+		}
+	</style>
+	<script>
+		function booking(){
+			alert("Are you sure? You want to book the Tickets.");
+			window.location.href="PaymentPage.html";
+		}
+	</script>
+</head>
+<body>
+	<div class="d1">
+		<center>
+			<table>
+				<tr>
+					<th style="font-size:70px;">Reservation</th>
+				</tr>
+			</table>
+		</center>
+	</div>
+	<div>
+		<pre>
+			<br><br><br>
+		</pre>
+	</div>
+	<form method="get">
+		<center>
+			<div class="d">
+				<div class="d2">
+					<center>
+						<table>
+							<tr>
+								<th style="font-size:30px;">Preferences</th>
+							</tr>
+							<tr>
+								<td>
+									<pre>
+										<br>
+									</pre>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size:18px;">Starting Place
+									<select name="starting place" id="s" style="font-size:18px;background:rgba(0,0,0,0.3);border-radius:7px;">
+										<option value="-1">-select-</option>
+										<option>Amritsar</option>
+										<option>Jalandhar</option>
+										<option>Bhatinda</option>
+										<option>Hisar</option>
+										<option>Delhi</option>
+										<option>Ludhiana</option>
+										<option>Chandigarh</option>
+										<option>Rohtak</option>
+										<option>Lucknow</option>
+										<option>Allahbad</option>
+										<option>Ajmer</option>
+										<option>Patna</option>
+										<option>Bhagalpur</option>
+										<option>Gandhinagar</option>
+										<option>Bhopal</option>
+										<option>Mumbai</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>
+										<br>
+									</pre>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size:18px;">Ending Place
+									<select name="ending place" id="e" style="font-size:18px;color:black;background:rgba(0,0,0,0.3);border-radius:7px;">
+										<option value="-1">-select-</option>
+										<option>Amritsar</option>
+										<option>Jalandhar</option>
+										<option>Bhatinda</option>
+										<option>Hisar</option>
+										<option>Delhi</option>
+										<option>Ludhiana</option>
+										<option>Chandigarh</option>
+										<option>Rohtak</option>
+										<option>Lucknow</option>
+										<option>Allahbad</option>
+										<option>Ajmer</option>
+										<option>Patna</option>
+										<option>Bhagalpur</option>
+										<option>Gandhinagar</option>
+										<option>Bhopal</option>
+										<option>Mumbai</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>
+										<br>
+									</pre>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size:18px;">
+								Train No.<input type="text"  style="border-radius:7px" placeholder="Train no" id="tn">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>
+										<br>
+									</pre>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size:18px;">
+									Select Type
+									<select name="type" id="ty" style="font-size:18px;color:black;background:rgba(0,0,0,0.3);border-radius:7px;">
+										<option value="-1">-select-</option><option value="a">general(Rs300)</option>
+										<option value="b">3tier(600)</option>
+										<option value="c">2tier(Rs800)</option>
+										<option value="d">3tier-AC(Rs1000)</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>
+									<br>
+									</pre>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size:18px;">
+									Date of Journey
+									<input type="date" id="da" style="font-size:18px;color:black;background:rgba(0,0,0,0.3);border-radius:7px;"> 
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<pre>
+									<br>
+									</pre>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size:18px;">
+									No of Tickets
+									<input type="text" placeholder="No of Tickets" id="no"
+									style="font-size:18px;color:black;border-radius:7px;">
+								</td>
+							</tr>
+						</table>
+					</center>
+				</div>
+				<div class="d3">
+					<table>
+						<tr>
+							<th style="font-size:30px;">Passenger Details</th>
+						</tr>
+						<tr>
+							<td>
+								<pre>
+								<br>
+								</pre>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-size:18px;">
+								Passenger Name&emsp;
+								<input type="text" placeholder="Name" 
+								style="font-size:18px;color:black;border-radius:7px; id="na" ">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<pre>
+								<br>
+								</pre>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-size:18px;">
+								Age&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+								<input type="text" placeholder="Age" 
+								style="font-size:18px;color:black;border-radius:7px;" id="a">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<pre>
+								<br>
+								</pre>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-size:18px;">
+								Phone No.&emsp;&emsp;&emsp;
+								<input type="text" placeholder="Phone No" id="pno"
+								style="font-size:18px;color:black;border-radius:7px;">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<pre>
+								<br>
+								</pre>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-size:18px;">
+								Email Id&emsp;&emsp;&emsp;&emsp;
+								<input type="Email" placeholder="Email Id" 
+								style="font-size:18px;color:black;border-radius:7px; " id="em">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<pre>
+								<br>
+								</pre>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="button" value="Book" id="b" style="background-color:orange; border-radius:20px;" onclick="booking()">
+								<input type="reset" value="Reset" id="b1" style="background-color:orange; border-radius:20px;" onmouseover="bg3()" onmouseout="bg4()">
+								<input type="button" value="Back" id="b2" style="background-color:orange; border-radius:20px;" onmouseover="bg5()" onmouseout="bg6()" onclick='window.location.href="Railway.html"'>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</center>
+	</form>
+</body>
+</html>
