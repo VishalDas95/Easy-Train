@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add the train</title>
+	<style>
+	body{
+			font-family: Helvetica;
+			background-color: white;
+			background: url('trainbg.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.d{
+			width:90%;
+		}
+		.d1{
+			background-color:white;
+			opacity:0.5;
+			width:100%;
+			border-radius:50px;
+		}
+		.d2{
+			width:40%;
+			border-radius:20px;
+			background-color:yellow;
+		}
+		.d3{
+			float:right;
+			width:40%;
+			border-radius:20px;
+			background-color:yellow;
+		}
+	</style>
+	<script>
+		function g(){
+			document.getElementById("m").style.background="green";
+		}
+		function y(){
+			document.getElementById("m").style.background="orange";
+		}
+		function g1(){
+			document.getElementById("m1").style.background="green";
+		}
+		function y1(){
+			document.getElementById("m1").style.background="orange";
+		}
+		function add()
+		{
+			var l1=document.getElementById("i1").value;
+			var l2=document.getElementById("i2").value;
+			var l3=document.getElementById("i3").value;
+			var l4=document.getElementById("i4").value;
+			if(l1=="-1"||l2=="-1"||l3==""||l4==""){
+				alert("Please fill all the fields");
+			}
+			else{
+				alert("Addition of train is successful!");
+				alert("Redirecting to menu page.......");
+				window.location.href="admin1.html";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="d1">
+		<center>
+			<table>
+				<tr>
+					<th style="font-size:70px;">Add The Train</th>
+				</tr>
+			</table>
+		</center>
+	</div>
+	<div>
+		<pre>
+		<br><br><br>
+		</pre>
+	</div>
+	<form method="get">
+		<center>
+		<div class="d">
+		<div class="d2">
+			<center>
+				<table>
+					<tr>
+						<th style="font-size:30px;">Preferences</th>
+					</tr>
+					<tr>
+						<td>
+							<pre>
+							<br>
+							</pre>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:18px;">Starting Place&emsp;&emsp;&emsp;&emsp;
+							<select name="starting place" id="i1" style="font-size:18px;color:black;background:rgba(0,0,0,0.3);border-radius:7px;">
+								<option value="-1">-Select-</option>
+								<option>Amritsar</option>
+								<option>Jalandhar</option>
+								<option>Bhatinda</option>
+								<option>Hisar</option>
+								<option>Delhi</option>
+								<option>Ludhiana</option>
+								<option>Chandigarh</option>
+								<option>Rohtak</option>
+								<option>Lucknow</option>
+								<option>Allahbad</option>
+								<option>Ajmer</option>
+								<option>Patna</option>
+								<option>Bhagalpur</option>
+								<option>Gandhinagar</option>
+								<option>Bhopal</option>
+								<option>Mumbai</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<pre>
+							<br>
+							</pre>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:18px;">Ending Place&emsp;&emsp;&emsp;&emsp;
+							<select name="ending place" id="i2" style="font-size:18px;color:black;background:rgba(0,0,0,0.3);border-radius:7px;">
+								<option value="-1">-Select-</option>
+								<option>Amritsar</option>
+								<option>Jalandhar</option>
+								<option>Bhatinda</option>
+								<option>Hisar</option>
+								<option>Delhi</option>
+								<option>Ludhiana</option>
+								<option>Chandigarh</option>
+								<option>Rohtak</option>
+								<option>Lucknow</option>
+								<option>Allahbad</option>
+								<option>Ajmer</option>
+								<option>Patna</option>
+								<option>Bhagalpur</option>
+								<option>Gandhinagar</option>
+								<option>Bhopal</option>
+								<option>Mumbai</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<pre>
+							<br>
+							</pre>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:18px; ">
+						Train No.&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"  id="i3" style="font-size:18px;color:black;border-radius:7px;" placeholder="Train no">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<pre>
+							<br>
+							</pre>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:18px;">
+							Days of Running&emsp;&emsp;
+							<input type="text" id="i4" placeholder="Days of Running" 
+							style="font-size:18px;color:black;border-radius:7px;">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<pre>
+							<br>
+							</pre>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:18px;">
+						Starting Time&emsp;&emsp;&emsp;&emsp;<input type="time" id="i5" style="font-size:18px;color:black;border-radius:7px;">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<pre>
+							<br>
+							<br>
+							</pre>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:18px;">
+							<input type="button" style="font-size:30px; border-radius:20px;background-color:orange;" value="Add the Train" onmouseover="g()" onmouseout="y()" id="m" onclick="add()">
+							<input type="button" style="font-size:30px;border-radius:20px;background-color:orange;" value="Back" onmouseover="g1()" onmouseout="y1()" id="m1" onclick='window.location.href="admin1.html"'>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</div>
+	</form>
+</body>
+</html>

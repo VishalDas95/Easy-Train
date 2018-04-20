@@ -1,0 +1,125 @@
+<html>
+<head>
+<style>
+body{
+	font-family: Helvetica;
+	background-color: white;
+	background: url('trainbg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+.bu
+{
+border-radius:20px;
+background-color:skyblue;
+}
+.in
+{
+border-radius:2px;
+}
+.bb
+{
+border-radius:15px;
+width:50%;
+background-color:grey;
+}
+.sig
+{
+float:left;
+border-radius:10px;
+background-color:grey;
+width:100%;
+opacity:1;
+}
+.b
+{
+border-radius:10px;
+}
+</style>
+<script>
+function call()
+{
+var ab=document.getElementById("f").value;
+var bc=document.getElementById("m").value;
+var ca=document.getElementById("l").value;
+var cd=document.getElementById("e").value;
+var de=document.getElementById("em").value;
+if(ab==""||bc==""||ca==""||cd==""||de=="")
+{
+alert("Please fill all the fields!");
+}
+else if((cd.indexOf('@')<=0))
+{
+alert("Invalid email! Please enter your email adress correctly");
+}
+
+
+else if(cd!=de)
+{
+alert("email adresses not matched");
+}
+
+else
+{
+alert("account created sucessfully!");
+alert("Redirecting to main page.........");
+window.location.href="Railway.html";
+}
+}
+</script>
+</head>
+<body>
+<div class="sig">
+<center>
+<table>
+	<tr><td style="font-size:50px;text-align:center;" >Sign Up Please.</td></tr>
+	<tr><td style="font-size:20px;">&emsp;&emsp;<input type="button" class="b" value="Login to existing account" onclick='window.location.href="Login.html"'></td></tr>
+</table>
+</center>
+</div>
+<div>
+<table>
+<tr><td><pre><br><br><br></pre></td></tr>
+</table>
+</div>
+<div>
+<table>
+<tr><td><pre><br><br></pre></td></tr>
+</table>
+</div>
+<center>
+<div class="bb">
+<form method="get">
+<table style="font-size:23px;">
+<tr><td><input type="text" placeholder="First name" id="f" class="in" style="font-size:17px;text-align:center;" required></td></tr>
+<tr><td><input type="text" placeholder=" Middle Name" id="m" class="in" style="font-size:17px;text-align:center;" required></td></tr>
+<tr><td><input type="text" placeholder="Last Name" id="l" class="in" style="font-size:17px;text-align:center;" required></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><input type="Email" placeholder="Email adress" id="e" class="in" style="font-size:17px;text-align:center;" required></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><input type="Email" placeholder="Renter Email adress" id="em" class="in" style="font-size:17px;text-align:center;" required></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td style="font-size:17px;">Date Of Birth:<input type="date" class="in" style="font-size:17px;text-align:center;"" required></td></tr>
+<tr><td style="font-size:17px;">Gender:<input type="radio" name="gender" value="male" style="font-size:17px;text-align:center;" >Male
+&emsp;&emsp;<input type="radio" name="gender" value="female" style="font-size:17px;text-align:center;">Female</td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td>&emsp;&emsp;&emsp;<input type="button" class="bu" value="Create Account" onclick="call()" style="font-size:17px;text-align:center;"></td></tr>
+
+</table>
+</form>
+</div>
+</center>
+</body>
+</html>

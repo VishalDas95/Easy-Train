@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up Page</title>
+<link rel="stylesheet" href="Login.css">
+<script>
+	function call()
+{
+var ab=document.getElementById("f").value;
+var bc=document.getElementById("m").value;
+var ca=document.getElementById("l").value;
+var cd=document.getElementById("e").value;
+var de=document.getElementById("em").value;
+if(ab==""||bc==""||ca==""||cd==""||de=="")
+{
+alert("Please fill all the fields!");
+}
+else if((cd.indexOf('@')<=0))
+{
+alert("Invalid email! Please enter your email adress correctly");
+}
+
+
+else if(cd!=de)
+{
+alert("email adresses not matched");
+}
+
+else
+{
+alert("account created sucessfully!");
+alert("Redirecting to main page.........");
+window.location.href="Railway.html";
+}
+}
+</script>
+</head>
+<body>
+<center>
+	<div id="box">
+		<h1 style="text-align:center; color:black"><b><u>Login Here</u></b></h1>
+		<form id="register" type=get action="Railway.html" onsubmit="call()">
+			<table width="100%" cellspacing="0px" style="padding:1px" cellpadding="0px">
+   				 <tr><td>&nbsp;&nbsp;&nbsp;<input type="email" id="email" name="email" placeholder="Enter email" required><p style="color:red" id="alert_email"></p></td></tr>
+				<tr><td>&nbsp;&nbsp;&nbsp;<input  type="password" onblur="onkeypass()" id="password" maxlength="15" placeholder="Create Password" min="8" required>
+			<p id="alert_pass" style="color:red"></p></td></tr>
+				<tr><td>&nbsp;&nbsp;<b><input type="submit" id="submit" class="button" value="Login"></b></td></tr>
+			</table>
+		</form>
+    <h4><a href="signup.html">I Don't Have Account</a></h4></center>
+    </div>
+    </center>
+</body>
+</html>
