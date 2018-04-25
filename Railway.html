@@ -13,7 +13,7 @@
 		<div class="logo">
 			.Easytrains.com
 		</div>
-		<nav class="topNav">
+		<aside class="topNav">
 		<center>
 		<table>
 		<tr>
@@ -26,9 +26,33 @@
 		</tr>
 		</table>
 		</center>
-	</nav>
+	</aside>
 	</header>
-	<center>
+	<section class="article">
+		<h1>Why Choose Us?</h1>
+		<p>We are One of India's best selling Railway Booking.</p>
+	</section>
+	<section class="container">
+		<div class="login">
+			<form onsubmit="login()">
+				<input type="text" class="input text" name="username" placeholder="Enter Username">
+				<br>
+				<input type="password" class="input text" name="password" placeholder="Enter Password">
+				<br>
+				<label>
+					<input type="checkbox">Remember Me
+					<br>
+				</label>
+				<input type="button" class="button text" value="Submit">
+			</form>
+		</div>
+	</section>
+	<script>
+		function login() {
+			window.location.href = "Reservation.html";
+		}
+	</script>
+	<!-- <center>
 		<div class="pictures" id="img">
 		<center>
 		<table>
@@ -51,7 +75,7 @@
 		</table>
 	</center>
 	</div>
-	</center>
+	</center> -->
 	<footer>
 		<center>
 			<table>
@@ -60,7 +84,7 @@
 					<td><a href="ContactUs.html">Contact Us</a></td>
 				</tr>
 			</table>
-			<span>2018 Copyright</span>
+			<span>2018 &copy;</span>
 		</center>
 	</footer>
 </body>

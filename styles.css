@@ -1,8 +1,7 @@
 body{
 	font-family: Helvetica;
 	background-color: white;
-	height: 2000px;
-	background: url('trainbg.jpg');
+	background: url('loginbg1.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -25,7 +24,7 @@ header {
 	height: 70px;
 	text-align: left;
 	margin: 30px;
-	background: rgba(60,60,60,0.4)
+	background: rgba(60,60,60,0.4);
 }
 .topNav a
 {
@@ -40,6 +39,26 @@ header {
 	background-color: #0CABF2FF;
 	border-radius: 4px;
 	box-shadow: 12px 15px 20px rgba(0,0,0,.1);
+}
+.container{
+	background: rgba(207, 149, 41, 0.904);
+	padding:10px;
+	width: 400px;
+	margin: 0 auto;
+}
+.login{
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto;
+	color:white;
+}
+.input{
+	padding: 4px;
+	height: 30px;
+	width: 70%;
+	margin-bottom: 6px;
+	border: none;
+	border-radius: 2px;
 }
 footer {
 	overflow: hidden;
@@ -63,9 +82,9 @@ footer a:hover
 	border-radius: 4px;
 	box-shadow: 12px 15px 20px rgba(0,0,0,.1);
 }
-.pictures{
+/* .pictures{
 	/* height: 600px; */
-}
+} */
 .popularDest{
 	display: inline-block;
 	height: 210px;
