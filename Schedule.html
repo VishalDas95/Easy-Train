@@ -1,129 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Schedule</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Schedule</title>
+	<link rel="stylesheet" href="styles.css">
 <style>
-body{
-	font-family: Helvetica;
-	background-color: white;
-	background: url('trainbg.jpg');
-	background-size: cover;
-	background-attachment: fixed;
+* {
+  box-sizing: border-box;
 }
-.button{
-	font-size:20px;
-	border-radius:10px;
-	background:rgba(204,51,0,0.1);
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
-table.table
-{
-	background:rgba(153,153,153,0.9);
-	margin-top:20px;
-	border-radius:20px;
-	border-collapse:collapse;
-	text-align:center;
-	font-size:17px;
-	color:#000;
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
 }
 </style>
 </head>
 <body>
-<br>
-<center>
-<table style="text-align:center;">
-<tr>
-<td>
-<input type="button" value="Back" onclick="window.location.href='Railway.html'" class="button">
-</td>
-</tr>
-</table>
-</center>
-<center>
-<table class="table" cellpadding="20">
-<tr>
-<th>Train Code</th>
-<th>Train Name</th>
-<th>Arrival</th>
-<th>Departure</th>
-<th>Days of Run</th>
-</tr>
-<tr>
-<td>12723/12724</td>
-<td>Hyderabad-New Delhi A.P Express</td>
-<td>06:25</td>
-<td>19:50</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>19923/19927</td>
-<td>Hyderabad-Bhopal Express</td>
-<td>07:20</td>
-<td>15:50</td>
-<td>Sat,Sun,Mon,Tue,Wed,Thurs</td>
-</tr>
-<td>18823/18823</td>
-<td>Bhopal-Agra Express</td>
-<td>09:20</td>
-<td>17:50</td>
-<td>Sat,Sun,Mon,Tue,Wed,Thurs</td>
-</tr>
-<td>12723/12724</td>
-<td>Hyderabad-New Delhi Express</td>
-<td>06:25</td>
-<td>19:40</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>12723/12724</td>
-<td>Hyderabad-Assan Express</td>
-<td>06:25</td>
-<td>19:50</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>127973/125724</td>
-<td>Delhi-A.P Express</td>
-<td>06:25</td>
-<td>19:50</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>11723/11724</td>
-<td>Rajdhani Express</td>
-<td>16:25</td>
-<td>09:50</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>12723/12724</td>
-<td>Shatabadi  Express</td>
-<td>08:25</td>
-<td>20:50</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>12723/12724</td>
-<td>Hyderabad-New Delhi A.P Express</td>
-<td>06:25</td>
-<td>19:50</td>
-<td>Sat,Sun,Mon</td>
-</tr>'<td>12723/12724</td>
-<td>Hyderabad-New Delhi A.P Express</td>
-<td>06:25</td>
-<td>19:50</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>10723/10724</td>
-<td>Mumbai-Kolkata Express</td>
-<td>10:25</td>
-<td>00:00</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-<td>12973/12324</td>
-<td>Jalandhar-Amritsar Express</td>
-<td>06:25</td>
-<td>09:25</td>
-<td>Sat,Sun,Mon</td>
-</tr>
-</table>
-<br>
+	<div class="bgImage"></div>
+	<header>
+		<div class="logo">
+			<a color='black' href="Railway.html">.Easytrains.com</a>
+		</div>
+	</header>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for trains.." title="Type in a name">
 
+<ul id="myUL">
+  <li><a href="train1.html" target="_self">Hyderabad-New Delhi A.P Express</a></li>
+  <li><a href="train2.html" target="_self">Hyderabad-Bhopal Express</a></li>
 
-</center>
+  <li><a href="train3.html" target="_self">Bhopal-Agra Express</a></li>
+  <li><a href="train4.html" target="_self">Hyderabad-New Delhi Express</a></li>
+
+  <li><a href="train5.html" target="_self">Hyderabad-Assan Express</a></li>
+  <li><a href="train6.html" target="_self">Delhi-A.P Express</a></li>
+  <li><a href="train7.html" target="_self">Rajdhani Express</a></li>
+  <li><a href="train8.html" target="_self">Shatabadi  Express</a></li>
+  <li><a href="train9.html" target="_self">Mumbai-Kolkata Express</a></li>
+  <li><a href="train10.html" target="_self">Jalandhar-Amritsar Express</a></li>
+</ul>
+<footer>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="Railway.html">Home</a></li>
+            <li><a href="Login.html">Back</a></li>
+        </ul>
+    </nav>
+    <span>2018 &copy; Easytrains</span>
+</footer>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
 </body>
 </html>

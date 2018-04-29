@@ -1,19 +1,18 @@
 body{
 	font-family: Helvetica;
-	background-color: white;
-	background: url('loginbg1.jpg');
-	background-size: cover;
-	background-attachment: fixed;
+	background: rgba(30, 123, 210, 0.424);
+	background: url(assets/img/login2.jpg);
 }
 header {
 	padding: 2px;
 	font-size: 30px;
+	background-size: cover;
 }
 .logo{
 	font-family: sans-serif;
 	font-size: 60px;
 	font-weight: bold;
-	color: black;
+	color: white!important;
 }
 .blur{
 	  	filter: blur(1px);
@@ -26,30 +25,97 @@ header {
 	margin: 30px;
 	background: rgba(60,60,60,0.4);
 }
-.topNav a
-{
-	float: left;
-	color: white;
-	padding: 14px 20px;
+nav{
+	text-align: center;
+	padding: 0;
+	min-width: 500px;
 }
-.topNav a:hover
-{
+nav ul{
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0)0%,
+	rgba(255, 255, 255, 0.2)25%,
+	rgba(255, 255, 255, 0.2)75%,
+	rgba(255, 255, 255, 0)100%);
+	box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+}
+nav ul li{
+	display: inline-block;
+}
+nav ul li a{
+	padding: 10px;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-decoration: none;
+	display: block;
+}
+nav ul li a:hover{
 	color: black;
-	transition: all 600ms ease-in-out;
+	transition: all 800ms ease-in-out;
 	background-color: #0CABF2FF;
 	border-radius: 4px;
 	box-shadow: 12px 15px 20px rgba(0,0,0,.1);
 }
+footer{
+	text-align: center;
+	color: white;
+}
 .container{
-	background: rgba(207, 149, 41, 0.904);
+	color: white;
+	background: transparent;
 	padding:10px;
-	width: 400px;
-	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	margin-left: 35%;
+	margin-top: inherit;
+}
+.content{
+	margin-top: 8px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.mySlides{
+	width: 100%;
+	height: 600px;
+}
+.display-container:hover span.display-hover{
+	display:inline-block
+}
+.display-container:hover .display-hover{
+	display:block
+}
+.button{
+	border:none;
+	display:inline-block;
+	padding:8px 16px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:inherit;
+	background-color:inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+}
+.black,.hover-black:hover{
+	color:#fff!important;
+	background-color:#000!important;
+}
+.display-left{
+	position: absolute;
+	top:65%;
+	left:0%;
+	transform:translate(0%,-50%);
+	transform:translate(-0%,-50%);
+}
+.display-right{
+	position:absolute;
+	top:65%;
+	right:0%;
+	transform:translate(0%,-50%);
+	transform:translate(0%,-50%);
 }
 .login{
 	text-align: center;
 	padding: 20px;
-	margin: 0 auto;
 	color:white;
 }
 .input{
@@ -60,16 +126,38 @@ header {
 	border: none;
 	border-radius: 2px;
 }
-footer {
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+/* footer {
+	text-align: center;
 	overflow: hidden;
 	height: 70px;
 	align-content: center;
 	margin: 20px;
 	font-size: 30px;
-	background: rgba(60,60,60,0.4)
+	background: rgba(60,60,60,0.4);
 
 }
 footer a {
+	text-align: center;
 	float: left;
 	color: white;
 	padding: 14px 20px;
@@ -81,9 +169,6 @@ footer a:hover
 	background-color: #0CABF2FF;
 	border-radius: 4px;
 	box-shadow: 12px 15px 20px rgba(0,0,0,.1);
-}
-/* .pictures{
-	/* height: 600px; */
 } */
 .popularDest{
 	display: inline-block;

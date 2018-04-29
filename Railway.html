@@ -3,89 +3,71 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Railway Website</title>
+	<title>Home-Easytrains</title>
 	<link rel="stylesheet" href="styles.css">
-	<script src="RailwayJS.js"></script>
+	<script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<div class="bgImage"></div>
 	<header>
 		<div class="logo">
-			.Easytrains.com
+			<a href="Railway.html">Easytrains.com</a><br>
 		</div>
-		<aside class="topNav">
-		<center>
-		<table>
-		<tr>
-			<td><a class="active" href="Railway.html">Home</a></td>
-			<td><a class="active" href="Schedule.html" target="_blank">Schedule</a></td>
-			<td><a href="Offers.html" target="_blank">Top Offers</a></td>
-			<td><a href="Reservation.html" target="_blank">Book Tickets</a></td>
-			<td><a href="Signup.html" target="_blank">Register</a></td>
-			<td><a href="login.html" target="_blank">Already Registered</a></td>
-		</tr>
-		</table>
-		</center>
-	</aside>
+		<nav>
+			<ul>
+				<li><a href="Railway.html">Home</a></li>
+				<li><a href="Schedule.html" target="_blank">Schedule</a></li>
+				<li><a href="Offers.html" target="_blank">Top Offers</a></li>
+				<li><a href="Reservation.html" target="_blank">Book Tickets</a></li>
+				<li><a href="Explore.html">Explore</a></li>
+				<li><a href="Login.html">Logout</a></li>
+			</ul>
+		</nav>
+		<marquee style="color: white;">India's most Trusted and most Secure Railway Reservation System</marquee>
 	</header>
-	<section class="article">
-		<h1>Why Choose Us?</h1>
-		<p>We are One of India's best selling Railway Booking.</p>
-	</section>
-	<section class="container">
-		<div class="login">
-			<form onsubmit="login()">
-				<input type="text" class="input text" name="username" placeholder="Enter Username">
-				<br>
-				<input type="password" class="input text" name="password" placeholder="Enter Password">
-				<br>
-				<label>
-					<input type="checkbox">Remember Me
-					<br>
-				</label>
-				<input type="button" class="button text" value="Submit">
-			</form>
-		</div>
-	</section>
+	<img src="assets/img/trainimg.png" style="margin-left: 15%" alt="Select and Go">
+	<div class="content display-container">
+		<img class="mySlides" src="assets/img/Ghana.jpg" style="width:100%">
+		<img class="mySlides" src="assets/img/Golden.jpg" style="width:100%">
+		<img class="mySlides" src="assets/img/Slide.jpg" style="width:100%">
+		<img class="mySlides" src="assets/img/Maharajas.jpg" style="width:100%">
+		<button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+	</center>
+	<footer>
+			<hr>
+		<nav>
+			<ul>
+				<li><a href="Railway.html">Back To Top</a></li>
+				<li><a href="ContactUs.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<span>2018 &copy; Easytrains</span>
+	</footer>
 	<script>
-		function login() {
-			window.location.href = "Reservation.html";
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = x.length }
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			x[slideIndex - 1].style.display = "block";
 		}
 	</script>
-	<!-- <center>
-		<div class="pictures" id="img">
-		<center>
-		<table>
-		<tr>
-			<td><img class="popularDest"  src="img1.jpg" alt="Gateway To India" title="Gateway To India"></td>
-			<td><img class="popularDest"  src="img2.jpg" alt="Golden Temple" title="Golden Temple"></td>
-			<td><img class="popularDest"  src="img3.jpg" alt="Hawa Mahal" title="Hawa Mahal"></td>
-			<td><img class="popularDest"  src="img4.jpg" alt="India Gate" title="India Gate"></td>
-		</tr>
-		<tr>
-			<td><img class="popularDest"  src="img5.jpg" alt="Jaisalmer" title="Jaisalmer"></td>
-			<td><img class="popularDest"  src="img6.jpg" alt="Jodhpur" title="Jodhpur"></td>
-			<td><img class="popularDest"  src="img7.jpg" alt="Mysore Palace" title="Mysore Palace"></td>
-			<td><img class="popularDest"  src="img8.jpg" alt="Nahagarh Fort Jaipur" title="Nahagarh Fort Jaipur"></td>
-		</tr>
-			<td><img class="popularDest"  src="img9.jpg" alt="New Delhi" title="New Delhi"></td>
-			<td><img class="popularDest"  src="img10.jpg" alt="Ranakpur" title="Ranakpur"></td>
-			<td><img class="popularDest"  src="img11.jpg" alt="Red Fort" title="Red Fort"></td>
-			<td><img class="popularDest"  src="img12.jpg" alt="Taj" title="Taj"></td>
-		</table>
-	</center>
-	</div>
-	</center> -->
-	<footer>
-		<center>
-			<table>
-				<tr>
-					<td><a href="Railway.html">Back To Top</a></td>
-					<td><a href="ContactUs.html">Contact Us</a></td>
-				</tr>
-			</table>
-			<span>2018 &copy;</span>
-		</center>
-	</footer>
+	<script>
+		var img = document.querySelector('.pictures');
+
+			function showPics() {
+				img.classList.add('picturesNew');
+			}
+	</script>
 </body>
 </html>

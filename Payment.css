@@ -1,0 +1,49 @@
+body{
+    font-family: Helvetica;
+    background-color: white;
+    background: url('assets/img/trainbg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.r{
+    border-radius:10px;
+}
+.p{
+    background-color:orange;
+    border-radius:10px;
+    width:50%;
+}
+nav{
+    text-align: center;
+    padding: 0;
+    min-width: 500px;
+}
+nav ul{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0)0%,
+    rgba(255, 255, 255, 0.2)25%,
+    rgba(255, 255, 255, 0.2)75%,
+    rgba(255, 255, 255, 0)100%);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+}
+nav ul li{
+    display: inline-block;
+    font-size: 30px;
+}
+nav ul li a{
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-decoration: none;
+    display: block;
+}
+nav ul li a:hover{
+    color: black;
+    transition: all 800ms ease-in-out;
+    background-color: #0CABF2FF;
+    border-radius: 4px;
+    box-shadow: 12px 15px 20px rgba(0,0,0,.1);
+}
+footer{
+    text-align: center;
+    color: white;
+}

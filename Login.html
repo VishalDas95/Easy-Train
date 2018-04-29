@@ -1,27 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Login</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login-Easytrains</title>
 	<link rel="stylesheet" href="Login.css">
 </head>
 <body>
+	<header>
+		<div class="logo">
+			<a href="Login.html">Easytrains.com</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="Explore.html">Explore</a></li>
+				<li><a href="Schedule.html">Schedule</a></li>
+			</ul>
+		</nav>
+	</header>
 	<div class="container">
+		<section class="article">
+			<h1>Why Choose Us?</h1>
+			<h3>One of India's best selling Railway Booking.</h3>
+			<br> We are one of India's most trusted Railway Booking System.
+			<br>We ensure safety and security during transaction and make sure our customers have full control of their ticket even after
+			booking.
+			<br>
+		</section>
 		<div class="login">
-			<form onsubmit="login()">
-				<input type="text" class="input" name="username" placeholder="Enter Username"><br>
-				<input type="password" class="input" name="password" placeholder="Enter Password"><br>
+			<form onsubmit="login()" method="POST">
+				<input type="text" class="input text" id="usr" name="username" placeholder="Enter Username">
+				<br>
+				<input type="password" class="input text" id="pswd" name="password" placeholder="Enter Password">
+				<br>
 				<label>
-					<input type="checkbox">Remember Me<br>
+					<input type="checkbox">Remember Me
+					<br>
 				</label>
-				<input type="button" class="button" value="Submit">
+				<input type="submit" class="button text" value="Submit"><br>
+				<a href="Signup.html">Create an Account</a>
 			</form>
 		</div>
 	</div>
 	<script>
-		function login(){
-			window.location.href="Reservation.html";
+		function login() {
+			var username;
+			var password;
+			username=document.getElementById("usr").value;
+			password=document.getElementById("pswd").value;
+			if (username=="abcd" && password=="1234") {
+			window.open("Railway.html");
+			alert('Login Successful');
+			}
+			else
+			{
+				alert('Incorrect Username or Password');
+			}
 		}
 	</script>
+	<footer>
+		<hr>
+		<nav>
+			<ul>
+				<li><a href="ContactUs.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<span>2018 &copy; Easytrains</span>
+	</footer>
 </body>
 </html>

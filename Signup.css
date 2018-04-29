@@ -1,5 +1,5 @@
 body{
-	background: url('trainbg.jpg');
+	background: url('assets/img/trainbg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -25,7 +25,7 @@ body{
 
 }
 #userid:focus,#name:focus,#email:focus,#password:focus,#repassword:focus,#mobile:focus {
-    background: #fff;
+    background: rgb(12, 6, 6);
     box-shadow: 0 0 0 3px #4CAF50, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );
     outline: none;
 }
@@ -40,7 +40,7 @@ body{
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; /*Vendor prefixe for Safari */
     transition-duration: 0.4s;
     cursor: pointer;
 	background-color: white; 
