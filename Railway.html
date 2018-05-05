@@ -24,8 +24,9 @@
 		</nav>
 		<marquee style="color: white;">India's most Trusted and most Secure Railway Reservation System</marquee>
 	</header>
-	<img src="assets/img/trainimg.png" style="margin-left: 15%" alt="Select and Go">
+	<img src="assets/img/trainimg.png" style="margin-left: 18%" alt="Select and Go">
 	<div class="content display-container">
+		<span>Best Trains to Choose from</span>
 		<img class="mySlides" src="assets/img/Ghana.jpg" style="width:100%">
 		<img class="mySlides" src="assets/img/Golden.jpg" style="width:100%">
 		<img class="mySlides" src="assets/img/Slide.jpg" style="width:100%">
@@ -47,6 +48,7 @@
 	<script>
 		var slideIndex = 1;
 		showDivs(slideIndex);
+
 		function plusDivs(n) {
 			showDivs(slideIndex += n);
 		}
@@ -55,19 +57,25 @@
 			var i;
 			var x = document.getElementsByClassName("mySlides");
 			if (n > x.length) { slideIndex = 1 }
-			if (n < 1) { slideIndex = x.length }
+			if (n < 1) { slideIndex = x.length };
 			for (i = 0; i < x.length; i++) {
 				x[i].style.display = "none";
 			}
 			x[slideIndex - 1].style.display = "block";
 		}
-	</script>
-	<script>
-		var img = document.querySelector('.pictures');
-
-			function showPics() {
-				img.classList.add('picturesNew');
-			}
+		var myIndex = 0;
+		carousel();
+		function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";  
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}    
+		x[myIndex-1].style.display = "block";  
+		setTimeout(carousel, 5000); // Change image every 5 seconds
+		}
 	</script>
 </body>
 </html>
